@@ -1,0 +1,56 @@
+---
+title: Arcana
+image: ./img/arcana.jpg
+---
+
+
+Web3 developers building on the **peaq** chain can onboard app users quickly via the [social login](https://docs.arcana.network/concepts/social-login) feature of the [Arcana Auth SDK](https://arcana.network/auth). Apps can integrate with this SDK to enable the in-app, non-custodial [Arcana wallet](https://docs.arcana.network/concepts/anwallet/) for authenticated users to sign blockchain transactions. 
+
+To get started, see the [Auth Quickstart Guide](https://docs.arcana.network/quick-start/). Use the appropriate SDK flavor as per your [app type](https://docs.arcana.network/sdk-installation). 
+
+## In-app Arcana wallet
+
+The in-app, non-custodial [Arcana wallet](https://docs.arcana.network/concepts/anwallet/) is automatically available via the [Arcana Auth SDK](https://docs.arcana.network/concepts/authsdk). The SDK can be integrated with any app type, including [web, mobile, and gaming apps](https://docs.arcana.network/sdk-installation). 
+
+The users of apps integrated with the Arcana Auth SDK can access the **peaq** chain via the in-app Arcana wallet, right out of the box. The peaq chain is preconfigured in the blockchain network list. Developers can choose to configure it as the [default active chain](https://docs.arcana.network/setup/config-dapp-with-db/) by using the [Arcana Developer Dashboard](https://dashboard.arcana.network/). 
+
+![Arcana Developer Dashboard](./img/dashboard_setup.gif)
+
+App users don't need to install a browser extension to use the Arcana wallet or switch to the peaq chain. When a user logs into the app, they can instantly access the Arcana wallet and sign blockchain transactions on the peaq chain which is automatically selected as the active chain. This simplifies UX and speeds up app onboarding. 
+
+![Arcana wallet peaq active chain](./img/arcana_wallet_peaq.gif)
+
+Developers can tailor the user experience of signing blockchain transactions on the peaq chain. Besides the look and 
+feel of the wallet, developers can also manage when the wallet UI is displayed within the app context to sign blockchain 
+transactions.
+
+[Learn more](https://docs.arcana.network/user-guides/wallet-ui/).
+
+## Enable Arcana wallet
+
+Users cannot directly access the Arcana wallet as a standalone application. App developers must 
+integrate the app with the Arcana Auth SDK and enable users to access the Arcana Wallet within the 
+app.
+
+Developers need to follow these steps for integration:
+
+1. **Register the app** with the [Arcana Developer Dashboard](https://dashboard.arcana.network/), 
+and copy the unique client identifier for the app.
+2. **Configure Auth SDK usage** via the dashboard, specify social login options, wallet user 
+experience settings, etc.
+3. **Download and [install](https://docs.arcana.network/sdk-installation)** the Arcana Auth SDK, integrate the app, and add a single line code to onboard users by using the plug-and-play login ui via the`connect()` method. After a successful user login, *Arcana wallet will automatically display within the app context*, enabling the user to sign blockchain transactions instantly. 
+
+:::note
+
+The in-app Arcana Wallet supports [JSON/RPC calls and web3 wallet operations](https://docs.arcana.network/auth/web3-ops/evm/).
+
+:::
+
+## References
+
+* [Social login providers](https://docs.arcana.network/web3-stack/auth/)
+* [Blockchain networks](https://docs.arcana.network/web3-stack/chains/)
+* [Browsers](https://docs.arcana.network/web3-stack/browsers/)
+* [Supported app types](https://docs.arcana.network/web3-stack/apps/)
+* [Arcana Developer Dashboard](https://dashboard.arcana.network/)
+* [API](https://docs.arcana.network/auth/auth-usage-guide/)
